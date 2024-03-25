@@ -92,7 +92,7 @@ func Addstudent(c *gin.Context) {
 			var createDB = client.Database("ClassRoom").Collection("student")
 
 			var found = createDB.FindOne(ctx, bson.M{
-				"login" : usertempt.StudentEmail,
+				"studentemail" : usertempt.StudentEmail,
 			})
 			var Loginisexxsist structs.Student
 			found.Decode(&Loginisexxsist)
